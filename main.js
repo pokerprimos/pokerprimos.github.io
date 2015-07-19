@@ -15,10 +15,19 @@
 					  $("#tblJogos").append("<tr><td>" + key +"</td><td>" + value + "</td></tr>");
 				});
 
-                //jogos vencedores
-				$.each(obj.jogadoresvencedores, function( key, value ) {
-					  $("#tblJogadores").append("<tr><td valign='top'>" + key +"</td><td>" + montarJogos(value) + "</td></tr>");
-				});
+                //jogadores vencedores
+                var idx=0;
+                var jogadoresvencedoresHtml = "";
+                for	(var item in obj.jogadoresvencedores){
+                	if (idx % 3 == 0){
+                		if (idx > 0) jogadoresvencedoresHtml += "</tr>";
+                		jogadoresvencedoresHtml += "<tr>";
+                	}
+                	jogadoresvencedoresHtml += "<td valign='top'><b>" + item + "</b></td><td>" + montarJogos(obj.jogadoresvencedores[item]) + "</td><td style='border:0;'>&nbsp;</td>";	
+                	idx += 1;	
+                }
+                jogadoresvencedoresHtml += "</tr>";
+				$("#tblJogadores").append(jogadoresvencedoresHtml);
 
                 //final
 				$.each(obj.final, function( key, value ) {
