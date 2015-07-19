@@ -37,10 +37,13 @@
 			});
 
 			function montarJogos(jogos){
-				var html="<table cellpadding='2'>"
+				var html="<table cellpadding='2'>";
+				var total=0;
 				$.each(jogos, function( key, value ) {
-					  html = html + "<tr><td>" + key + "</td><td><b>" + value + "</b></td></tr>";
+					total += value; 
+					html = html + "<tr><td>" + key + "</td><td><b>" + value + "</b></td></tr>";
 				});
+				html = html + "<tr style='background-color:#f60;'><td><b>total</b></td><td><b>" + total + "</b></td></tr>";
 				html += "</table>"
 				return html;
 			}
