@@ -1,8 +1,12 @@
 <html>
 	<head>
 		<style type="text/css">
-			body{
+			h2,h3{
 				font-family:verdana;
+			}
+			p,td,li,span{
+				font-family:verdana;
+				font-size: large;
 			}
 			#header{
 				background-color: #c0c0c0;
@@ -18,7 +22,10 @@
 	    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 		<script type="text/javascript">
 			var obj= {
-					  "data": "17/07/2015",
+					  "quandoFoi": "17/07/2015",
+					  "ondeFoi": "casa do S&eacute;rgi&atilde;o",
+					  "inicio": "21:10",
+					  "termino": "02:45",
 					  "pessoas": [
 					    "Serginho",
 					    "S&eacute;rgi&atilde;o",
@@ -31,9 +38,6 @@
 					  "foto": "",
 					  "fichas": 53,
 					  "cacife": "R$20",
-					  "onde foi": "casa do S&eacute;rgi&atilde;o",
-					  "inicio": "21:10",
-					  "termino": "02:45",
 					  "jogosvencedores": {
 					    "1 par": 7,
 					    "2 pares": 28,
@@ -145,47 +149,15 @@
 					    "Tio Fernando": "-R$10,00",
 					    "Tia Cristina": "-R$10,00"
 					  }
-					};
-			$("document").ready(function(){
-				//quem foi
-				$.each(obj.pessoas, function( index, value ) {
-					  $("#quemFoi").append("<li>"+value+"</li>");
-				});
-				
-				//cacife, fichas, horarios	
-                $("#geral").append("Cada um recebeu <b style='color:green;'>" + obj.fichas + "</b> fichas e o cacife foi <b style='color:green;'>" + obj.cacife + "</b>. Come&ccedil;amos " + obj.inicio + " e a &uacute;ltima rodada foi " + obj.termino + ".");
-
-                //jogos vencedores
-				$.each(obj.jogosvencedores, function( key, value ) {
-					  $("#tblJogos").append("<tr><td>" + key +"</td><td>" + value + "</td></tr>");
-				});
-
-                //jogos vencedores
-				$.each(obj.jogadoresvencedores, function( key, value ) {
-					  $("#tblJogadores").append("<tr><td valign='top'>" + key +"</td><td>" + montarJogos(value) + "</td></tr>");
-				});
-
-                //final
-				$.each(obj.final, function( key, value ) {
-					  $("#tblFinal").append("<tr><td valign='top'>" + key +"</td><td>" + value + "</td></tr>");
-				});
-				$("#troco").append(obj.troco.quemGanhou + " ganhou a rodada do troco com um " + obj.troco.jogo);
-			});
-
-			function montarJogos(jogos){
-				var html="<table cellpadding='2'>"
-				$.each(jogos, function( key, value ) {
-					  html = html + "<tr><td>" + key + "</td><td><b>" + value + "</b></td></tr>";
-				});
-				html += "</table>"
-				return html;
-			}
-
+					};					
 		</script>
+
+		<script type="text/javascript" src="main.js"></script>
+
 	</head>
 	<body>
 		<div id="header">
-			<h2>17/07/2015, casa do S&eacute;rgi&atilde;o</h2>
+			<h2 id="dataLocal"/>
 		</div>
 		<div id="contents">
 			<p>
