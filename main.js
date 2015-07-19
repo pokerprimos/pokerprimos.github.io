@@ -19,7 +19,7 @@
                 var idx=0;
                 var jogadoresvencedoresHtml = "";
                 for	(var item in obj.jogadoresvencedores){
-                	if (idx % 3 == 0){
+                	if (idx % 2 == 0){
                 		if (idx > 0) jogadoresvencedoresHtml += "</tr>";
                 		jogadoresvencedoresHtml += "<tr>";
                 	}
