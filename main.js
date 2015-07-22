@@ -1,4 +1,7 @@
 			$("document").ready(function(){
+				console.log(dt);
+				var obj= $.getJSON(dt);
+
 				//data local
                 $("#dataLocal").append(obj.quandoFoi + ", " + obj.ondeFoi);
 
