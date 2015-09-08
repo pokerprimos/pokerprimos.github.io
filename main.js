@@ -52,5 +52,5 @@
 				if (valor.indexOf("-") != -1)
 					return "<font color='#ff0000'>" + valor + "</font>";
 				else	
-					return "<font color='#006400'>" + valor + "</font>";
+					return "<font color='#006400'><b>" + valor + "</b></font>";
 			}		
