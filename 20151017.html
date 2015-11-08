@@ -1,0 +1,191 @@
+<html>
+	<head>
+		<style type="text/css">
+			h2,h3{
+				font-family:verdana;
+			}
+			p,td,li,span{
+				font-family:verdana;
+				font-size: medium;
+			}
+			#header{
+				background-color: #c0c0c0;
+    			padding:10px;
+				border: 2px solid #000000;
+				margin-bottom: 5px;
+			}
+			table{
+				border: #0000ff;
+			}
+		</style>
+
+	    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			var obj= {
+					  "quandoFoi": "17/10/2015",
+					  "ondeFoi": "casa do Giancarlo e da Fanny",
+					  "inicio": "16:53",
+					  "termino": "21:56",
+					  "pessoas": [
+					    "Serginho",
+					    "S&eacute;rgi&atilde;o",
+					    "Giancarlo",
+              "Guto",
+					    "Fanny",
+					    "Tio Fernando",
+					    "Tia Cristina"
+					  ],
+					  "foto": "",
+					  "fichas": 50,
+					  "cacife": "R$20",
+					  "jogosvencedores": {
+					    "1 par": 13,
+					    "2 pares": 9,
+					    "Trinca": 18,
+					    "Seguida": 7,
+					    "Full House": 6,
+					    "Flush": 1,
+					    "Quadra": 0,
+					    "Street": 0,
+					    "Royal": 0,
+					    "Solo":4
+					  },
+					  "jogadoresvencedores": {
+					    "Serginho": {
+					      "1 par": 0,
+					      "2 pares": 2,
+					      "Trinca": 2,
+					      "Seguida": 1,
+					      "Full House": 0,
+					      "Flush": 0,
+					      "Quadra": 0,
+					      "Street": 0,
+					      "Royal": 0,
+					      "Solo": 0
+					    },
+					    "S&eacute;rgi&atilde;o": {
+					      "1 par": 2,
+					      "2 pares": 1,
+					      "Trinca": 1,
+					      "Seguida": 0,
+					      "Full House": 1,
+					      "Flush": 0,
+					      "Quadra": 0,
+					      "Street": 0,
+					      "Royal": 0,
+					      "Solo": 0
+					    },
+					    "Giancarlo": {
+					      "1 par": 2,
+					      "2 pares": 1,
+					      "Trinca": 1,
+					      "Seguida": 0,
+					      "Full House": 1,
+					      "Flush": 0,
+					      "Quadra": 0,
+					      "Street": 0,
+					      "Royal": 0,
+					      "Solo": 2
+					    },
+					    "Fanny": {
+					      "1 par": 3,
+					      "2 pares": 1,
+					      "Trinca": 4,
+					      "Seguida": 1,
+					      "Full House": 1,
+					      "Flush": 0,
+					      "Quadra": 0,
+					      "Street": 0,
+					      "Royal": 0,
+					      "Solo": 0
+					    },
+					    "Guto": {
+					      "1 par": 2,
+					      "2 pares": 0,
+					      "Trinca": 0,
+					      "Seguida": 1,
+					      "Full House": 0,
+					      "Flush": 1,
+					      "Quadra": 0,
+					      "Street": 0,
+					      "Royal": 0,
+					      "Solo": 2
+					    },
+					    "Tio Fernando": {
+					      "1 par": 2,
+					      "2 pares": 3,
+					      "Trinca": 6,
+					      "Seguida": 1,
+					      "Full House": 2,
+					      "Flush": 0,
+					      "Quadra": 0,
+					      "Street": 0,
+					      "Royal": 0,
+					      "Solo": 0
+					    },
+					    "Tia Cristina": {
+					      "1 par": 2,
+					      "2 pares": 1,
+					      "Trinca": 4,
+					      "Seguida": 3,
+					      "Full House": 1,
+					      "Flush": 0,
+					      "Quadra": 0,
+					      "Street": 0,
+					      "Royal": 0,
+					      "Solo": 0
+					    }
+					  },
+					  "troco": {
+					    "quemGanhou": "Tia Cristina",
+					    "jogo": "1 par"
+					  },
+					  "final": {
+					    "Serginho": "-R$10,00",
+					    "S&eacute;rgi&atilde;o": "-R$20,00",
+					    "Giancarlo": "-R$20,00",
+					    "Fanny": "-R$20,00",
+					    "Guto": "R$10,00",
+					    "Tio Fernando": "R$30,00",
+					    "Tia Cristina": "R$30,00"
+					  }
+					};					
+		</script>
+
+		<script type="text/javascript" src="main.js"></script>
+
+	</head>
+	<body>
+		<div id="header">
+			<h2 id="dataLocal"/>
+		</div>
+		<div id="contents">
+			<p>
+				<h3>Quem foi</h3>
+				<ul id="quemFoi"></ul>
+			</p>
+			<p id="geral">				
+			</p>	
+			<p>
+				<h3>Jogos que sa&iacute;ram</h3>
+				<table border="1" cellpadding="2" cellspacing="2">
+					<tbody id="tblJogos"></tbody>
+				</table>
+			</p>
+			<p>
+				<h3>Quem ganhou</h3>
+				<table border="1" cellpadding="2" cellspacing="2">
+					<tbody id="tblJogadores"></tbody>
+				</table>
+			</p>
+			<p>
+				<h3>Resultado no final</h3>
+				<table border="1" cellpadding="2" cellspacing="2">
+					<tbody id="tblFinal"></tbody>
+				</table>
+				<span id="troco" />
+			</p>
+		</div>	
+	</body>	
+</html>
+
