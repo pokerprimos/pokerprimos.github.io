@@ -17,7 +17,7 @@
 					  $("#tblJogos").append("<tr><td>" + key +"</td><td>" + value + "</td></tr>");
 				});
 
-				$("#tblJogos").append("<tr style='background-color:#f60;'><td><b>total</b></td><td><b>" + total + "</b></td></tr>");
+				$("#tblJogos").append("<tr style='background-color:#f60;'><td><b>total</b></td><td><b>" + totalJogosVencedores + "</b></td></tr>");
 
                 //jogadores vencedores
                 var idx=0;
