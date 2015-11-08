@@ -11,9 +11,13 @@
                 $("#geral").append("Cada um recebeu <b style='color:#0000ff;'>" + obj.fichas + "</b> fichas e o cacife foi <b style='color:#0000ff;'>" + obj.cacife + "</b>. Come&ccedil;amos " + obj.inicio + " e a &uacute;ltima rodada foi " + obj.termino + ".");
 
                 //jogos vencedores
+				var totalJogosVencedores=0;
 				$.each(obj.jogosvencedores, function( key, value ) {
+            totalJogosVencedores += value;
 					  $("#tblJogos").append("<tr><td>" + key +"</td><td>" + value + "</td></tr>");
 				});
+
+				$("#tblJogos").append("<tr style='background-color:#f60;'><td><b>total</b></td><td><b>" + total + "</b></td></tr>");
 
                 //jogadores vencedores
                 var idx=0;
